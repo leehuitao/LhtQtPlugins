@@ -1,0 +1,24 @@
+syntax = "proto3"; // 指定proto版本
+
+package ServiceNetIO; // 包名
+option go_package="./;ServiceNetIO"; // 文件输出路径和包名，使用分号分隔开
+
+service UserServiceInterface { // 服务名
+  rpc NewNotify (stream NewMessageRequest) returns (stream ServiceMessageResponse);
+  //rpc GetNames (GetNamesRequest) returns (GetNamesResponse);
+}
+
+message NewMessageRequest {
+  bytes header = 1;
+  string server_name = 2;
+  int64 order_id = 3;
+  string encode_type = 4;
+  bytes body = 5;
+}
+
+message ServiceMessageResponse {
+  int32 send_status = 1;
+  int64 send_user_id = 2;
+  string send_user_name = 3;
+  int64 send_order_id = 4;
+}
