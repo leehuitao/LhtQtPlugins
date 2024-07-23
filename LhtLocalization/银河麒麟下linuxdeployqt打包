@@ -1,0 +1,8 @@
+export PATH=/home/xl/Qt5.9.2/5.9.2/gcc_64/bin:$PATH
+export LD_LIBRARY_PATH=/home/xl/Qt5.9.2/5.9.2/gcc_64/lib:$LD_LIBRARY_PATH
+export QT_PLUGIN_PATH=/home/xl/Qt5.9.2/5.9.2/gcc_64/plugins:$QT_PLUGIN_PATH
+export QML2_IMPORT_PATH=/home/xl/Qt5.9.2/5.9.2/gcc_64/qml:$QML2_IMPORT_PATH  将qt路径配置到 ~/.bashrc 下后source ~/.bashrc刷新
+https://github.com/probonopd/linuxdeployqt.git 下载打包程序   屏蔽main函数的版本信息部分
+将可执行程序拷贝到/usr/local/bin下
+linuxdeployqt appname   这里需要增加 --verbose 2 进行打包不然会失败
+中间可能需要安装几个库   apt安装即可

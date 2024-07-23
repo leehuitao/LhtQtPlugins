@@ -1,0 +1,42 @@
+#qemu安装
+https://blog.bossma.cn/server/install-kylin-v4-operating-system-based-on-virtual-arm64-architecture/
+
+对应的镜像可以去官网下
+#QEMU_EFI.fd 下载
+https://releases.linaro.org/components/kernel/uefi-linaro/16.02/release/qemu64/
+#虚拟网络的方法
+https://tap-windows.updatestar.com/  虚拟网口工具
+rem Add a new TAP virtual ethernet adapter
+"tapinstall.exe" install "OemWin2k.inf" tap0901
+ 
+
+#虚拟机路径在D:/projectTest/kylin
+
+用户名  leehuitao
+密码 Lht123..
+
+虚拟机的安装脚本和启动脚本在F盘根目录
+
+可能的问题
+
+防火墙
+
+上网
+
+系统软件源
+
+QT安装
+
+编译QCefView
+qtchooser qt5-qmake qtbase5-dev-tools qtcreator qt5*
+
+替换APT  使用aptitude 
+
+arm64下 QCefView的编译
+https://zhuanlan.zhihu.com/p/678575295
+
+CMAKE 需要升级到3.18或以上  新版本下载后直接就有编译结果 不需要重新编译
+需要将路径放到  ~/.bashrc 最后一行
+export PATH=/home/twan/tools/cmake-3.6.2-Linux-x86_64/bin:$PATH
+然后刷新
+source ~/.bashrc

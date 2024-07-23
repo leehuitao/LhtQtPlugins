@@ -1,0 +1,1 @@
+可以因为office是盗版的原因，加载word.application组件时候会失败
