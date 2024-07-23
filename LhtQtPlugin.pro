@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 QMAKE_CXXFLAGS += /utf-8
 QMAKE_LFLAGS += /utf-8
@@ -31,7 +31,7 @@ contains(DEFINES, BUILD_ENCODE) {
 include($$PWD/LhtLog/LhtLog.pri)
 include($$PWD/LhtFile/LhtFile.pri)
 include($$PWD/LhtGui/LhtGui.pri)
-include($$PWD/LhtImage/LhtImage.pri)
+include($$PWD/LhtImageProcess/LhtImage.pri)
 include($$PWD/LhtNetwork/LhtNetwork.pri)
 include($$PWD/LhtThread/LhtThread.pri)
 include($$PWD/LhtModel/LhtModel.pri)
