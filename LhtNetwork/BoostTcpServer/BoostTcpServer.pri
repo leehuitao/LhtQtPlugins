@@ -26,8 +26,8 @@ SOURCES += \
     $$PWD/tcp_connection.cpp
 
 INCLUDEPATH += $$PWD/../../LhtSql/include/
-LIBS += -L$$PWD/../../LhtSql/lib/debug/ -llibboost_chrono-vc143-mt-gd-x64-1_78 -llibboost_date_time-vc143-mt-gd-x64-1_78 -llibboost_filesystem-vc143-mt-gd-x64-1_78 -llibboost_locale-vc143-mt-gd-x64-1_78
-LIBS += -L$$PWD/../../LhtSql/lib/debug/  -llibboost_regex-vc143-mt-gd-x64-1_78 -llibboost_system-vc143-mt-gd-x64-1_78 -llibboost_thread-vc143-mt-gd-x64-1_78
+LIBS += -L$$PWD/../../LhtSql/lib/debug/ -llibboost_chrono-vc142-mt-gd-x64-1_78 -llibboost_date_time-vc142-mt-gd-x64-1_78 -llibboost_filesystem-vc142-mt-gd-x64-1_78 -llibboost_locale-vc142-mt-gd-x64-1_78
+LIBS += -L$$PWD/../../LhtSql/lib/debug/  -llibboost_regex-vc142-mt-gd-x64-1_78 -llibboost_system-vc142-mt-gd-x64-1_78 -llibboost_thread-vc142-mt-gd-x64-1_78
 LIBS +=  -llibcurl -llibeay32  -lssleay32
 
 

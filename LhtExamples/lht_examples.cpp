@@ -1,14 +1,18 @@
 #include "lht_examples.h"
 #include "ui_lht_examples.h"
+#ifdef BUILD_SQL
 #include "LhtSql/LhtMysql/dbio_mysql.hpp"
 #include "LhtSql/LhtHiredis/redis_manager.h"
 #include "LhtSql/LhtMongo/mongodb_manager.h"
+#endif
 #ifdef BUILD_GRPC
 #include "LhtGrpc/NetIO/server/server_interface.h"
 #endif
+#ifdef BUILD_BOOST
 #include "LhtNetwork/BoostTcpServer/network_manager.h"
 #include "LhtNetwork/BoostTcpServer/RegisterHandler.h"
 #include "LhtNetwork/BoostTcpServer/TestMethod.h"
+#endif
 LhtExamples::LhtExamples(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::LhtExamples)
@@ -111,6 +115,7 @@ void LhtExamples::initCamera()
 #endif
 }
 //------------------------------------------------BoostServer测试--------------------------------------------------------//
+#ifdef BUILD_BOOST
 class HandlerManager : private boost::noncopyable
 {
 public:
@@ -158,7 +163,7 @@ void LhtExamples::initBoostTcpServer()
     //------------------------启动------------------------------------------
     LhtBoostTcpServer::IOManager::instance().run();//启动服务work
 }
-
+#endif
 //------------------------------------------------Grpc测试--------------------------------------------------------//
 void LhtExamples::initGrpc(){
 #ifdef BUILD_GRPC
@@ -188,6 +193,7 @@ void LhtExamples::initTableView()
 {
 
 }
+
 //------------------------------------------------QDataPool测试--------------------------------------------------------//
 
 void LhtExamples::handleData(std::tuple<int, double, QString> &args)

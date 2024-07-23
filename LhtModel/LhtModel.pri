@@ -9,4 +9,10 @@ win32 {
 
 }
 
+HEADERS += \
+    $$PWD/MemoryPool/lht_memory_pool.h
+
+SOURCES += \
+    $$PWD/MemoryPool/lht_memory_pool.cpp
+
 
